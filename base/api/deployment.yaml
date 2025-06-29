@@ -16,15 +16,16 @@ spec:
         - name: api
           image: cjsqudwns/app:d5eabfb
           ports:
-            - containerPort: 8080
-          env:
-            - name: SPRING_DATASOURCE_URL
-              valueFrom:
-                configMapKeyRef:
-                  name: app-config
-                  key: db-url
-            - name: SPRING_DATASOURCE_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: app-secret
-                  key: db-password
+            - protocol: TCP
+              containerPort: 8080
+          # env:
+          #   - name: SPRING_DATASOURCE_URL
+          #     valueFrom:
+          #       configMapKeyRef:
+          #         name: app-config
+          #         key: db-url
+          #   - name: SPRING_DATASOURCE_PASSWORD
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: app-secret
+          #         key: db-password
