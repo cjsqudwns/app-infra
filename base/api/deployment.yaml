@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: cjsqudwns/app:latest
+          image: cjsqudwns/app:d57f3cbf6d6ee34ba9487edf655cf6f1fb949644
           ports:
             - containerPort: 8080
           env:
